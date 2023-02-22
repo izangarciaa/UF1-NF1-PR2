@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "573200567117",
+    "firebase_url": "https://izan-pr2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "izan-pr2",
+    "storage_bucket": "izan-pr2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573200567117:android:f87d6c7b0265fd836b4504",
+        "android_client_info": {
+          "package_name": "com.example.uf1_nf1_pr2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573200567117-pi7nh7dmt8i87gh64bj8iuu8nn5eavpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUTUv08uowJeNIvoFb10YBtyxOUJ3kWEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573200567117-pi7nh7dmt8i87gh64bj8iuu8nn5eavpa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
