@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class ListaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lista);
         InicialitzarComponents();
         LListarUsuaris();
+
         mBtn_MainPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,22 +50,22 @@ public class ListaActivity extends AppCompatActivity {
     }
 
     private void InicialitzarComponents() {
+        mLvusuarios = findViewById(R.id.LV_Usuarios);
         mBtn_MainPage = findViewById(R.id.BTN_MainPage);
         mDatabase = FirebaseDatabase.getInstance("https://izan-pr2-default-rtdb.europe-west1.firebasedatabase.app/");
         mReference = mDatabase.getReference();
-        mLvusuarios = findViewById(R.id.LV_Usuarios);
-
     }
 
     private void LListarUsuaris() {
-        mReference.child("Usuaris").addValueEventListener(new ValueEventListener() {
+
+        mReference.child("Usuari").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 mLlistaUsuaris.clear();
 
                 //Omplim la nostra llista d'usuaris a partir del snapshot de Firebase.
                 for (DataSnapshot ds : snapshot.getChildren()) {
-
                     Usuari usuari = ds.getValue(Usuari.class);
                     mLlistaUsuaris.add(usuari);
                 }

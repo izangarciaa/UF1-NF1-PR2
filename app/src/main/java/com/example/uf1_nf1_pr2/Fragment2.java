@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,17 +44,16 @@ public class Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_1, container, false);
+        View v = inflater.inflate(R.layout.fragment_2, container, false);
 
         mEtEmailFrg2 = v.findViewById(R.id.ET_Email);
         mEtPasswordFrg2 = v.findViewById(R.id.ET_Password);
-
         mBtnLoginFrg2 = v.findViewById(R.id.BTN_HacerLogin);
+//        Log.d("----", mBtnLoginFrg2.toString());
 
         mItemModelView2 = new ViewModelProvider(this).get(ItemViewModel.class);
         mDatabase = FirebaseDatabase.getInstance("https://izan-pr2-default-rtdb.europe-west1.firebasedatabase.app/");
         mReference = mDatabase.getReference();
-
         mBtnLoginFrg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

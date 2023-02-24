@@ -1,5 +1,6 @@
 package com.example.uf1_nf1_pr2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -57,8 +58,11 @@ public class Fragment1 extends Fragment {
         mBtnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("----", "hola");
+                mItemModelView.setDadesLiveData(mEtNomFrg1.getText().toString());
                 AfegirUsuari();
+
+                Intent intent = new Intent(getActivity(), Activity3.class);
+                startActivity(intent);
             }
         });
         return v;

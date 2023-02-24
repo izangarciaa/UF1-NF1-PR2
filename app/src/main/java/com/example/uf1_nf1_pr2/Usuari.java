@@ -49,7 +49,7 @@ public class Usuari {
 
     @Override
     public String toString() {
-        return "Usuari: " + mNom + ", Email='" + mEmail + ", Password='" + mPassword;
+        return "Usuari: " + mNom + ", Email= " + mEmail + ", Password= " + mPassword;
     }
 }
 

@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="#D3D3D3"
     tools:context=".MainActivity">
-
     <FrameLayout
         android:id="@+id/FL_ContingutFragments"
         android:layout_width="match_parent"
